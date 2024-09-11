@@ -1,4 +1,4 @@
-package com.example;
+package com.entities;
 
 public class Student {
     private int id;

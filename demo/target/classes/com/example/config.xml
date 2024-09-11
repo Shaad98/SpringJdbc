@@ -25,5 +25,10 @@
             <ref bean="ds" />
         </property>
     </bean>
+    <bean class="com.implement.StudentDaoImp" name="imp">
+        <property name="jdbcTemplate">
+            <ref bean="jdbcTemplate" />
+        </property>
+    </bean>
         
 </beans>
