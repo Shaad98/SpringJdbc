@@ -22,8 +22,14 @@ public class App
         // int r = jdbcTemplate.update(query, 12,"Shaad","Solapur");
         // System.out.println("Number of record inserted : "+r);
 
+        // StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
+        // Student student = new Student(15,"Sagar","Pune");
+        // studentDao.insert(student);
+
         StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
-        Student student = new Student(15,"Sagar","Pune");
-        studentDao.insert(student);
+        Student student = new Student(222,"Pavan","Delhi");
+        studentDao.update(student);
+
+        
     }
 }
