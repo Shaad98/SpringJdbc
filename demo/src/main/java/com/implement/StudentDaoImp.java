@@ -3,6 +3,7 @@ package com.implement;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.entities.Student;
+import com.select.RowMapperImp;
 
 public class StudentDaoImp implements StudentDao{
     private JdbcTemplate jdbcTemplate;
@@ -51,6 +52,15 @@ public class StudentDaoImp implements StudentDao{
         System.out.println(r+" row deleted!");
     }
 
+
+    @Override
+    public Student getStudent(int id) {
+        // selecting single student data
+        String query = "SELECT * FROM student WHERE id = ?";
+        Student student = this.jdbcTemplate.queryForObject(query,new RowMapperImp(),id);
+        return student;
+    }
+    
 
 
 }

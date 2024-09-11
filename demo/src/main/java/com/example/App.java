@@ -30,9 +30,12 @@ public class App
         // Student student = new Student(222,"Pavan","Delhi");
         // studentDao.update(student);
 
-        StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
-        studentDao.delete(12);
+        // StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
+        // studentDao.delete(12);
 
+        // StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
+        // Student st = studentDao.getStudent(222);
+        // System.out.println(st);
         
     }
 }
