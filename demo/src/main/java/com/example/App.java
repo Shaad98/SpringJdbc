@@ -1,7 +1,7 @@
 package com.example;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
+// import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.entities.Student;
 import com.implement.StudentDaoImp;
@@ -26,9 +26,12 @@ public class App
         // Student student = new Student(15,"Sagar","Pune");
         // studentDao.insert(student);
 
+        // StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
+        // Student student = new Student(222,"Pavan","Delhi");
+        // studentDao.update(student);
+
         StudentDaoImp studentDao  = context.getBean("imp",StudentDaoImp.class);
-        Student student = new Student(222,"Pavan","Delhi");
-        studentDao.update(student);
+        studentDao.delete(12);
 
         
     }
